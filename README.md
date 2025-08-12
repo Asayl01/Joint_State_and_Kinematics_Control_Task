@@ -1,1 +1,1 @@
-# Joint_State_and_Kinematics_Control_Task
+# Joint State and Kinematics Control Task
