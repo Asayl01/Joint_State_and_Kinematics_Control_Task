@@ -170,3 +170,6 @@ sudo chmod 777 /dev/ttyUSB0
 ```bash
 ros2 run arduinobot_description send_joint_angles.py --ros-args -p port:=/dev/ttyUSB0
 ```
+
+## Demo
+<video src="" controls></video>
