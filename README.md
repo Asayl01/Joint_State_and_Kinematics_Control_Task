@@ -75,3 +75,5 @@ Click "Execute" → the arm follows the planned path (sim or hardware)
 ![plan](plan.gif)
 
 ### 4. MoveIt with Gazebo (Simulation + Planning)
+You can run Gazebo together with MoveIt to simulate and plan robot arm trajectories:
+![sim](sim.gif)
