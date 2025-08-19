@@ -154,5 +154,5 @@ source ~/ros2_ws/install/setup.bash
 # Launch the visualization and GUI
 ros2 launch arduinobot_description display.launch.py
 ```
-** Terminal 2: Launch the Hardware Interface Node **
+**Terminal 2: Launch the Hardware Interface Node**
 This terminal runs the Python script that acts as a bridge, sending commands from the GUI to the Arduino.
