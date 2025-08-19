@@ -70,7 +70,6 @@ ros2 launch arduinobot_description display.launch.py
 In MoveIt with RViz, you move the interactive markers to set the target pose.
 Click "Planning" → MoveIt calculates the path using IK.
 Preview the motion in RViz.
-Click "Execute" → the arm follows the planned path (sim or hardware)
 
 ![plan](plan.gif)
 
