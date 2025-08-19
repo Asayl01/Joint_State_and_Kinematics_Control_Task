@@ -102,3 +102,12 @@ ros2 launch arduinobot_mc moveit_rviz.launch.py
 - When you Plan + Execute in RViz, the motion is carried out inside Gazebo.
 
 ### 4. Hardware Execution (Arduino + Servo)
+To control the physical robot arm while visualizing its state in RViz, you will need to run two processes in two separate terminals.
+
+#### Terminal 1: Launch the Visualization and Control GUI
+
+```cpp
+# Terminal 1 - This terminal runs RViz for the 3D simulation and the joint_state_publisher_gui for manual control with sliders.
+source ~/ros2_ws/install/setup.bash
+ros2 launch arduinobot_description display.launch.py
+```
