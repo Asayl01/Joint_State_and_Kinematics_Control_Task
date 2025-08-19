@@ -172,4 +172,5 @@ ros2 run arduinobot_description send_joint_angles.py --ros-args -p port:=/dev/tt
 ```
 
 ## Demo
-<video src="https://github.com/Asayl01/Joint_State_and_Kinematics_Control_Task/issues/1#issue-3334915740" controls></video>
+
+https://github.com/user-attachments/assets/15b0ea91-8df7-4792-9ec2-23b45f07ba1e
