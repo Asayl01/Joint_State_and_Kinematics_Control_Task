@@ -103,37 +103,54 @@ ros2 launch arduinobot_mc moveit_rviz.launch.py
 
 
 ## 4. Hardware Execution (Arduino + Servo)
-## Section 1: Arduino Setup - The Brain of the Arm
-The first step is to program the Arduino board, which will receive commands from ROS2 and translate them into physical motor movements.
+This section details the complete process for controlling the physical robot arm with ROS2, from programming the Arduino to running the live system.
 
-### 1.1 Finding the Arduino Code
+### Section 1: Arduino Setup - The Brain of the Arm
 
-The firmware for the Arduino is included within this project's repository. You can find it at the following path:
+The first and most critical step is to program the Arduino board, which will receive commands from ROS2 and translate them into physical motor movements.
 
-`~/ros2_ws/src/Robot_Arm_ROS2/arduino_firmware/arduino_firmware.ino`
+#### 1.1 Finding and Uploading the Arduino Code
 
+The firmware for the Arduino is included within this project's repository.
 
+1.  **Locate the Firmware:** You can find the code at the following path within your workspace:
+    `~/ros2_ws/src/Robot_Arm_ROS2/arduino_firmware/arduino_firmware.ino`
 
-### To control the physical robot arm while visualizing its state in RViz, you will need to run two processes in two separate terminals.
-#### Terminal 1: Launch the Visualization and Control GUI
+2.  **Upload to Arduino:**
+    *   Connect your Arduino board to your computer (or pass the USB device through to your Virtual Machine).
+    *   Open the `.ino` file with the Arduino IDE.
+    *   Go to `Tools` -> `Board` and select your Arduino model.
+    *   Go to `Tools` -> `Port` and select the serial port for your Arduino.
+    *   Click the "Upload" button.
 
-```cpp
-# Terminal 1 - This terminal runs RViz for the 3D simulation and the joint_state_publisher_gui for manual control with sliders.
+---
+
+### Section 2: Running the Live Control System
+
+To control the physical robot arm while visualizing its state in RViz, you will need to run processes in two separate terminals.
+
+#### 2.1 Find Your Arduino's Device Name
+
+Before launching the interface, you must identify the specific port name your system has assigned to the Arduino. This is crucial for the connection to succeed.
+
+*   **In your terminal (inside your Linux or Virtual Machine environment), run the following command:**
+    ```bash
+    ls /dev/tty*
+    ```
+*   **Look through the output list.** Your Arduino will be listed as either `/dev/ttyUSB0` or `/dev/ttyACM0`. Note down the exact name.
+
+#### 2.2 Launch the System
+
+Now, open two terminals and run the following commands.
+
+**Terminal 1: Launch the Visualization and Control GUI**
+
+This terminal runs RViz for the 3D simulation and the `joint_state_publisher_gui` for manual control with sliders.
+
+```bash
+# Source your workspace to activate the ROS2 packages
 source ~/ros2_ws/install/setup.bash
+
+# Launch the visualization and GUI
 ros2 launch arduinobot_description display.launch.py
-```
-
-#### Terminal 2: Launch the Hardware Interface Node
-
-```cpp
-# Terminal 2 - This terminal runs the Python script that acts as a bridge, sending commands from the GUI to the Arduino.
-source ~/ros2_ws/install/setup.bash
-# Use ttyUSB0 or ttyACM0, whichever you found
-sudo chmod 777 /dev/ttyUSB0
-```
-
-#### Run the hardware node:
-```cpp
-# Make sure to use the correct port name here as well
-ros2 run arduinobot_description send_joint_angles.py --ros-args -p port:=/dev/ttyUSB0
 ```
