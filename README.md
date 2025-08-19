@@ -2,7 +2,7 @@
 
 Controlling the robot arm in ROS2 either manually using joint_state_publisher or automatically using MoveIt with kinematics, in both simulation and hardware.
 
-## 📑 Table of Contents
+## Table of Contents
 
 1. [Project Requirements](#project-requirements)  
 2. [Installation and Setup](#installation-and-setup)  
