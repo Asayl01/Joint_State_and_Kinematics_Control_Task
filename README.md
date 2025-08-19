@@ -11,6 +11,8 @@ Controlling the robot arm in ROS2 either manually using joint_state_publisher or
 ## Installation and Setup
 Follow these steps to set up the project environment and dependencies.
 
-1- 
+### 1. Create a new workspace
+
+
 
 ## Usage
