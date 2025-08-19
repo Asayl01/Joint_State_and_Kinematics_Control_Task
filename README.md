@@ -111,3 +111,18 @@ To control the physical robot arm while visualizing its state in RViz, you will 
 source ~/ros2_ws/install/setup.bash
 ros2 launch arduinobot_description display.launch.py
 ```
+
+#### Terminal 2: Launch the Hardware Interface Node
+
+```cpp
+# Terminal 2 - This terminal runs the Python script that acts as a bridge, sending commands from the GUI to the Arduino.
+source ~/ros2_ws/install/setup.bash
+# Use ttyUSB0 or ttyACM0, whichever you found
+sudo chmod 777 /dev/ttyUSB0
+```
+
+#### Run the hardware node:
+```cpp
+# Make sure to use the correct port name here as well
+ros2 run arduinobot_description send_joint_angles.py --ros-args -p port:=/dev/ttyUSB0
+```
