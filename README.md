@@ -73,3 +73,5 @@ Preview the motion in RViz.
 Click "Execute" → the arm follows the planned path (sim or hardware)
 
 ![plan](plan.gif)
+
+### 4. MoveIt with Gazebo (Simulation + Planning)
