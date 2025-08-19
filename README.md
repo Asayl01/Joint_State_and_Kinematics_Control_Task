@@ -2,9 +2,15 @@
 
 Controlling the robot arm in ROS2 either manually using joint_state_publisher or automatically using MoveIt with kinematics, in both simulation and hardware.
 
-# Project Requirements
+## Project Requirements
 
 - ROS2 Humble on Ubuntu 22.04
 - Simulation environment (RViz / Gazebo)
 - Arduino + Servo motor for hardware execution
 
+## Installation and Setup
+Follow these steps to set up the project environment and dependencies.
+
+1- 
+
+## Usage
