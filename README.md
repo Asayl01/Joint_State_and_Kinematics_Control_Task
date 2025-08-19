@@ -2,6 +2,23 @@
 
 Controlling the robot arm in ROS2 either manually using joint_state_publisher or automatically using MoveIt with kinematics, in both simulation and hardware.
 
+## 📑 Table of Contents
+
+1. [Project Requirements](#project-requirements)  
+2. [Installation and Setup](#installation-and-setup)  
+   - [1. Create a new workspace](#1-create-a-new-workspace)  
+   - [2. Install dependencies](#2-install-dependencies)  
+   - [3. Build the workspace](#3-build-the-workspace)  
+3. [Usage](#usage)  
+   - [1. Controlling the robot arm with joint_state_publisher](#1-controlling-the-robot-arm-with-joint_state_publisher)  
+   - [2. Planning with MoveIt (Kinematics / IK)](#2-planning-with-moveit-kinematics--ik)  
+   - [3. MoveIt with Gazebo (Simulation + Planning)](#3-moveit-with-gazebo-simulation--planning)  
+4. [Hardware Execution (Arduino + Servo)](#4-hardware-execution-arduino--servo)  
+   - [Section 1: Arduino Setup](#section-1-arduino-setup---the-brain-of-the-arm)  
+   - [Section 2: Running the Live Control System](#section-2-running-the-live-control-system)  
+   - [Troubleshooting: Arduino not visible in VM](#-troubleshooting-arduino-not-visible-in-vm-virtualbox-usb)  
+5. [Demo](#demo)
+
 ## Project Requirements
 
 - ROS2 Humble on Ubuntu 22.04
