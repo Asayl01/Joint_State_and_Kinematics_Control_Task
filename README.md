@@ -12,7 +12,17 @@ Controlling the robot arm in ROS2 either manually using joint_state_publisher or
 Follow these steps to set up the project environment and dependencies.
 
 ### 1. Create a new workspace
+```cpp
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws
+```
 
-
+```cpp
+git clone https://github.com/smart-methods/Robot_Arm_ROS2.git
+```
+> Note: make sure you already have git installed before cloning. If not:
+```cpp
+sudo apt update && sudo apt install -y git
+```
 
 ## Usage
