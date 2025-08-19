@@ -123,7 +123,7 @@ The firmware for the Arduino is included within this project's repository.
     *   Go to `Tools` -> `Port` and select the serial port for your Arduino.
     *   Click the "Upload" button.
 
----
+
 
 ### Section 2: Running the Live Control System
 
@@ -154,3 +154,5 @@ source ~/ros2_ws/install/setup.bash
 # Launch the visualization and GUI
 ros2 launch arduinobot_description display.launch.py
 ```
+** Terminal 2: Launch the Hardware Interface Node **
+This terminal runs the Python script that acts as a bridge, sending commands from the GUI to the Arduino.
