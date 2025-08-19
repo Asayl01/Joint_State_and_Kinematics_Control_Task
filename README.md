@@ -156,3 +156,13 @@ ros2 launch arduinobot_description display.launch.py
 ```
 **Terminal 2: Launch the Hardware Interface Node**
 This terminal runs the Python script that acts as a bridge, sending commands from the GUI to the Arduino.
+# Step 1: Source your workspace in the new terminal
+source ~/ros2_ws/install/setup.bash
+
+# Step 2: Grant permissions to the USB port. 
+# IMPORTANT: Use the exact device name you found earlier (e.g., ttyUSB0 or ttyACM0).
+sudo chmod 777 /dev/ttyUSB0
+
+# Step 3: Run the hardware node, telling it which port to use.
+# IMPORTANT: Ensure the port name here matches the one in the previous command.
+ros2 run arduinobot_description send_joint_angles.py --ros-args -p port:=/dev/ttyUSB0
