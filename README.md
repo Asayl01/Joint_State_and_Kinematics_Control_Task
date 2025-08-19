@@ -56,6 +56,7 @@ colcon build --symlink-install
 ## Usage
 
 ### 1. Controlling the robot arm with joint_state_publisher
+In the joint_state_publisher GUI, you can move the sliders to change the arm’s joint angles in real time, and see the motion directly in RViz.
 
 ```bash
 source /opt/ros/humble/setup.bash
