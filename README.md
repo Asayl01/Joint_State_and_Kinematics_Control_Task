@@ -63,3 +63,10 @@ source ~/ros2_ws/install/setup.bash
 ros2 launch arduinobot_description display.launch.py
 ```
 ![joint_state_publisher](joint_state_publisher.jpg)
+
+
+### 2. Planning with MoveIt (Kinematics / IK)
+Run the MoveIt planning context:
+
+
+
