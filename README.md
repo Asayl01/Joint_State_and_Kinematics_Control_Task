@@ -74,7 +74,7 @@ Click "Execute" → the arm follows the planned path (sim or hardware)
 
 ![plan](plan.gif)
 
-### 4. MoveIt with Gazebo (Simulation + Planning)
+### 3. MoveIt with Gazebo (Simulation + Planning)
 You can run Gazebo together with MoveIt to simulate and plan robot arm trajectories:
 ![sim](sim.gif)
 
@@ -101,3 +101,5 @@ ros2 launch arduinobot_mc moveit_rviz.launch.py
 - Gazebo will simulate the physics of the robot arm.
 - RViz (with MoveIt) allows you to set target poses, plan, and execute them.
 - When you Plan + Execute in RViz, the motion is carried out inside Gazebo.
+
+### 4. Hardware Execution (Arduino + Servo)
