@@ -171,6 +171,22 @@ sudo chmod 777 /dev/ttyUSB0
 ros2 run arduinobot_description send_joint_angles.py --ros-args -p port:=/dev/ttyUSB0
 ```
 
+
+
+###  Troubleshooting: Arduino not visible in VM (VirtualBox USB)
+
+**Symptom:** Arduino doesn’t appear in `Devices > USB` (or it’s grayed out) inside the VM.  
+**Cause:** USB 2.0/3.0 support isn’t enabled (Extension Pack missing).
+
+**Fix:**
+1. Install the **Oracle VM VirtualBox Extension Pack** (same version as your VirtualBox).
+2. On the **Host**, open the downloaded `.vbox-extpack` to install.
+3. VM ➜ `Settings > USB` ➜ select **USB 3.0 (xHCI) Controller** ➜ Save.
+4. Reboot the VM, reconnect Arduino, then verify:
+   ```bash
+   ls /dev/tty*   # expect /dev/ttyUSB0 or /dev/ttyACM0
+
+
 ## Demo
 
 https://github.com/user-attachments/assets/15b0ea91-8df7-4792-9ec2-23b45f07ba1e
