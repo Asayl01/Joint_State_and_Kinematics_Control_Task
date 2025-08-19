@@ -46,5 +46,9 @@ sudo apt-get install -y \
   ros-humble-gazebo-ros2-control
 ```
 
+### 3. Build the workspace
+```cpp
+colcon build --symlink-install
+```
 
 ## Usage
