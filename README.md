@@ -52,3 +52,13 @@ colcon build --symlink-install
 ```
 
 ## Usage
+### Controlling the robot arm by joint_state_publisher
+## Usage
+
+### 1. Controlling the robot arm with joint_state_publisher
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/ros2_ws/install/setup.bash
+ros2 launch arduinobot_mc rsp.launch.py
+```
