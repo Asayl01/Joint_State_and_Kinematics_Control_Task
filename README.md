@@ -101,10 +101,11 @@ ros2 launch arduinobot_mc moveit_rviz.launch.py
 - RViz (with MoveIt) allows you to set target poses, plan, and execute them.
 - When you Plan + Execute in RViz, the motion is carried out inside Gazebo.
 
-### 4. Hardware Execution (Arduino + Servo)
+
+## 4. Hardware Execution (Arduino + Servo)
 To control the physical robot arm while visualizing its state in RViz, you will need to run two processes in two separate terminals.
 
-#### Terminal 1: Launch the Visualization and Control GUI
+### Terminal 1: Launch the Visualization and Control GUI
 
 ```cpp
 # Terminal 1 - This terminal runs RViz for the 3D simulation and the joint_state_publisher_gui for manual control with sliders.
@@ -112,7 +113,7 @@ source ~/ros2_ws/install/setup.bash
 ros2 launch arduinobot_description display.launch.py
 ```
 
-#### Terminal 2: Launch the Hardware Interface Node
+### Terminal 2: Launch the Hardware Interface Node
 
 ```cpp
 # Terminal 2 - This terminal runs the Python script that acts as a bridge, sending commands from the GUI to the Arduino.
@@ -121,7 +122,7 @@ source ~/ros2_ws/install/setup.bash
 sudo chmod 777 /dev/ttyUSB0
 ```
 
-#### Run the hardware node:
+### Run the hardware node:
 ```cpp
 # Make sure to use the correct port name here as well
 ros2 run arduinobot_description send_joint_angles.py --ros-args -p port:=/dev/ttyUSB0
