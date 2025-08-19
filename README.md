@@ -20,9 +20,14 @@ cd ~/ros2_ws
 ```cpp
 git clone https://github.com/smart-methods/Robot_Arm_ROS2.git
 ```
-> Note: make sure you already have git installed before cloning. If not:
+> Note 1: make sure you already have git installed before cloning. If not:
 ```cpp
 sudo apt update && sudo apt install -y git
 ```
+> Note 2: after cloning, verify the package was downloaded:
+```cpp
+ls -la src/
+```
+You should see a folder named Robot_Arm_ROS2 inside ~/ros2_ws/src.
 
 ## Usage
