@@ -62,3 +62,4 @@ source /opt/ros/humble/setup.bash
 source ~/ros2_ws/install/setup.bash
 ros2 launch arduinobot_mc rsp.launch.py
 ```
+![joint_state_publisher](joint_state_publisher.jpg)
